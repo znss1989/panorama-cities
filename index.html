@@ -15,13 +15,21 @@
   <body>
     <a-scene>
       <a-assets>
-        <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-        <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
+        <img id="city-ny" crossorigin="anonymous" src="./img/ny.jpg" alt="New York">
+        <img id="city-paris" crossorigin="anonymous" src="./img/paris.jpg" alt="Paris">
+        <img id="city-rome" crossorigin="anonymous" src="./img/rome.jpg" alt="Rome">
+        <img id="city-shanghai" crossorigin="anonymous" src="./img/shanghai.jpg" alt="Shanghai">
+
+        <img id="thumb-city-ny" crossorigin="anonymous" src="./img/thumb-city-ny.jpg" alt="New York">
+        <img id="thumb-city-paris" crossorigin="anonymous" src="./img/thumb-city-paris.jpg" alt="Paris">
+        <img id="thumb-city-rome" crossorigin="anonymous" src="./img/thumb-city-rome.jpg" alt="Rome">
+        <img id="thumb-city-shanghai" crossorigin="anonymous" src="./img/thumb-city-shanghai.jpg" alt="Shanghai">
+        
+        <!-- <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
         <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-        <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
+        <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg"> -->
+
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-        <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-        <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/nunjucks">
@@ -42,9 +50,11 @@
 
       <!-- Image links. -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#city-ny" data-thumb="#thumb-city-ny"></a-entity>
+        <a-entity template="src: #link" data-src="#city-paris" data-thumb="#thumb-city-paris"></a-entity>
+        <a-entity template="src: #link" data-src="#city-rome" data-thumb="#thumb-city-rome"></a-entity>
+        <a-entity template="src: #link" data-src="#city-shanghai" data-thumb="#thumb-city-shanghai"></a-entity>
+        
       </a-entity>
 
       <!-- Camera + cursor. -->
